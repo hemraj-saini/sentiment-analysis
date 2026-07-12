@@ -1,4 +1,10 @@
 import streamlit as st
+
+st.set_page_config(
+    page_title="Movie Sentiment Analysis",
+    page_icon="🎬",
+    layout="centered"
+)
 import joblib
 
 from preprocessing import preprocess
@@ -6,10 +12,6 @@ from preprocessing import preprocess
 # Load Model
 model = joblib.load("models/model.pkl")
 tfidf = joblib.load("models/tfidf.pkl")
-
-st.set_page_config(
-    page_title="Movie Sentiment Analysis"
-)
 
 st.title(" IMDb Movie Review Sentiment Analysis")
 
