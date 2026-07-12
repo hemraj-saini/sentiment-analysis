@@ -4,7 +4,12 @@ import joblib
 import re
 from bs4 import BeautifulSoup
 from nltk.corpus import stopwords
+import nltk
 
+nltk.download("stopwords", quiet=True)
+nltk.download("punkt", quiet=True)
+nltk.download("wordnet", quiet=True)
+nltk.download("omw-1.4", quiet=True)
 
 stop_words=set(stopwords.words('english'))
 nlp = spacy.load("en_core_web_sm",disable=["parser", "ner"])
